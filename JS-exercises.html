@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            /*let salary = prompt("Please enter the salary of the month: ")
+            let month = prompt("Enter the name of the month: ")
+            let saving_per = prompt("Enter percentage for savings: ")
+            let rent_per = prompt("Enter percentage for rent: ")
+            let elec_per = prompt("Enter percentage for electricity: ")
+
+            let savings = salary * (saving_per/100)
+            let rent = salary * (rent_per/100)
+            let elec = salary * (elec_per/100)
+            console.log("Savings: ", savings, "\nRent: ", rent, "\nElectricity: ", elec) 
+
+            let total = savings + rent + elec
+            console.log("Total amount is: ", total )
+
+            let remainder = salary - total
+            console.log("The remainder is: ", remainder)
+
+            let yearly_cost = (rent+elec)*12
+            console.log("The yearly cost of rent and electricity is: ", yearly_cost)
+
+            let salary_power2 = salary**2
+            console.log("Salary raised by 2 is: ", salary_power2)
+
+            let add_saving = 50 % salary
+            console.log(add_saving)*/
+
+            //****************************
+
+            /*let num = prompt("Enter x: ")
+            array = []
+
+            for(let i=1;i<=num;i++){
+                for(let j = 1;j<=i;j++){
+                    array.push(j)
+                }
+                console.log(array.join(' '))
+                array = []
+            }*/
+
+            //*****************************
+           
+            /*let num = prompt("Enter x: ")
+            array = []
+            for(let i=1;i<=num;i++){
+                if(i%3 == 0 && i%5 == 0){
+                    array.push(i)
+                }
+            }
+            console.log(array.join(','))*/
+            
+            //*****************************
+
+            /*let rows = prompt("Enter number of rows: ")
+            array = []
+            for(let i = 1;i <= rows; i++){
+                array.push(' '.repeat(rows-i))
+                array.push('*'.repeat((i*2)-1))
+                console.log(array.join(' '))
+                array = []
+            }
+            for(let i = rows-1; i > 0; i--){
+                array.push(' '.repeat(rows-i))
+                array.push('*'.repeat((i*2)-1))
+                console.log(array.join(' '))
+                array = []
+            }*/
+            
+            //******************************
+
+            /*let n = prompt("Enter a number: ")
+            let total = 0
+            for(let i = 0; i <= n; i++){
+                if(i % 2 != 0){
+                    total += i
+                }
+            }
+            console.log(total)*/
+
+            //*******************************
+
+            /*let num = prompt("Enter a number: ")
+            let array = []
+            for(let i = 0;i<num; i++){
+                if (i == 0 || i == 1){
+                    array.push(i)
+                }
+                else{
+                    x = array[(i-1)]+array[(i-2)]
+                    array.push(x)
+                }
+            }
+            console.log(array.join(','))*/
+
+            //*******************************
+
+            /*function max_profit(prices){
+                if(prices.length <= 1){
+                    return 0
+                }
+                else{
+                    let min_price = prices[0]
+                    let max_profit = 0
+                    for(let i = 0;i<prices.length;i++){
+                        if(prices[i]<min_price){
+                            min_price = prices[i]
+                        }
+                        profit = prices[i]-min_price
+                        if(profit>max_profit){
+                            max_profit = profit
+                        }
+                    }
+                    return max_profit
+                }
+            }  
+            prices = [ 99,100,5,7,3,4,9,16,21,75,2,8]
+            console.log(max_profit(prices))*/
+            
+            //***********************************
+
+            /*function special_rearrangement(nums){
+                let new_nums_even = []
+                let new_nums_odd = []
+                for(let i = 0; i<nums.length;i++){
+                    if(nums[i] % 2 == 0){
+                        new_nums_even.push(nums[i])
+                    }
+                    if(nums[i] % 2 != 0){
+                        new_nums_odd.push(nums[i])
+                    } 
+                }
+                new_nums = new_nums_even + "," + new_nums_odd
+                return new_nums
+            }
+            let nums = [1,2,3,4,5,6,7,8,9] 
+            console.log(special_rearrangement(nums))*/
+
+            //*************************************
+
+            
+
+            /*function find_peaks(array){
+                let indices_lst = []
+                for(let i = 0; i<array.length;i++){
+                    if(array[i]>array[i-1] && array[i]>array[i+1]){
+                        indices_lst.push(i)
+                    }
+                }
+                return indices_lst
+            }
+            array = [9,10,1,4,3,1,5,4,5,7,2,1,9,5]
+            console.log(find_peaks(array))*/
+
+            //*******************************
+            
+            /*function move_zeros(numbers){
+                let normal_nums = []
+                let zeros = []
+                for(let i = 0; i<numbers.length;i++){
+                    if(numbers[i] != 0){
+                        normal_nums.push(numbers[i])
+                    }
+                    if(numbers[i] == 0){
+                        zeros.push(numbers[i])
+                    } 
+                }
+                new_nums = normal_nums + "," + zeros
+                return new_nums
+            }
+            let nums = [1,0,3,0,0,5,6,4,0,3,2,0,10] 
+            console.log(move_zeros(nums))*/
+
+            //***********************************
+
+            /*function rebuild_sentence(words, lengths){
+                output = []
+                for(let i=0; i<words.length;i++){
+                    word = words[i]
+                    output.push(word.slice(0,lengths[i]))
+                }
+                console.log(output.join(' '))
+            }
+            words = [ "My", "Name", "is", "Mohamad" ] 
+            lengths = [ 2, 3, 2, 4 ]
+            rebuild_sentence(words, lengths)*/
+
+            //*************************************
+
+            /*function longest_subarray(array) {
+                let count_0 = 0;
+                let count_1 = 0;
+                let sub_array = [];
+                
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] === 0) {
+                        count_0 += 1;
+                    } else if (array[i] === 1) {
+                        count_1 += 1;
+                    }
+                    if (count_1 === count_0) {
+                        sub_array = array.slice(0, i + 1); 
+                        console.log(sub_array);
+                    }
+                }
+                
+                return sub_array.length;
+            }
+
+            let array = [1, 1, 0, 0, 1, 0, 0, 1];
+            console.log(longest_subarray(array));*/
+
+            //****************************************
+
+            /*function firstMissingPositive(numbers) {
+                const positiveNumbers = new Set();
+                for (let i = 0; i < numbers.length; i++) {
+                    if (numbers[i] > 0) {
+                        positiveNumbers.add(numbers[i]);
+                    }
+                }
+
+                let smallestMissing = 1;
+                while (positiveNumbers.has(smallestMissing)) {
+                    smallestMissing +=   1;
+                }
+
+                return smallestMissing;
+            }
+
+            console.log(firstMissingPositive([3, 4, -1, 1]));*/ 
+
+        </script>
+    </body>
+</html>
